@@ -2,10 +2,20 @@ import React, {useEffect} from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
 
+import addOffreAction from '../../actions/recruteur/addOffre'
+
 
 function handleSubmit (e) {
 			e.preventDefault();
-	alert(e.target.titre.value)
+
+			const offre = {
+				
+				titre: e.target.titre.value,
+				description: e.target.description.value
+
+			}
+			addOffreAction(offre)
+	
 }
 
 
@@ -67,28 +77,28 @@ const Profile = () => {
 					 					</div>
 					 					
 					 					<div className="col-lg-3">
-					 						<span  for="customRange1" className="pf-title">Salaire Min </span>
+					 						<span  htmlFor="customRange1" className="pf-title">Salaire Min </span>
 					 						<div className="pf-field">
-												<input type="number"  name="salaire_min" class="custom-range" ></input>
+												<input type="number"  name="salaire_min" className="custom-range" ></input>
 					 						</div>
 					 					</div>
 										 <div className="col-lg-3">
-					 						<span  for="customRange1" className="pf-title">Salaire Max </span>
+					 						<span  htmlFor="customRange1" className="pf-title">Salaire Max </span>
 					 						<div className="pf-field">
-												<input type="number"  name="salaire_max" class="custom-range" ></input>
+												<input type="number"  name="salaire_max" className="custom-range" ></input>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-3">
-					 						<span className="pf-title"  for="customRange2">Expérience réquise Min (mois)</span>
+					 						<span className="pf-title"  htmlFor="customRange2">Expérience réquise Min (mois)</span>
 					 						<div className="pf-field">
-												<input type="number"  name="experience_min" class="custom-range" ></input>
+												<input type="number"  name="experience_min" className="custom-range" ></input>
 					 							
 					 						</div>
 					 					</div>
 										 <div className="col-lg-3">
-					 						<span className="pf-title"  for="customRange2">Expérience réquise Max (mois)</span>
+					 						<span className="pf-title"  htmlFor="customRange2">Expérience réquise Max (mois)</span>
 					 						<div className="pf-field">
-												<input type="number"  name="experience_max" class="custom-range" ></input>
+												<input type="number"  name="experience_max" className="custom-range" ></input>
 					 							
 					 						</div>
 					 					</div>
