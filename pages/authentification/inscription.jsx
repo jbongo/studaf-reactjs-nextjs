@@ -1,7 +1,7 @@
 import React from 'react'
 
 import TopMenuPage from '../TopMenu/TopMenuPage'
-import {NavLink} from 'react-router-dom';
+import Link from 'next/link';
 
 
 
@@ -71,7 +71,7 @@ const inscription = () => {
 								</form>
 								<div className="extra-login">
 											
-								<span><NavLink to="/connexion" title="">J'ai déjà un compte <i className="la la-long-arrow-right"></i></NavLink></span>
+								<span><Link to="/connexion" title="">J'ai déjà un compte <i className="la la-long-arrow-right"></i></Link></span>
 
 									
 									<div className="login-social">

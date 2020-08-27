@@ -1,6 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
+
+
+function handleSubmit (e) {
+			e.preventDefault();
+	alert(e.target.titre.value)
+}
+
+
 
 
 const Profile = () => {
@@ -8,7 +16,6 @@ const Profile = () => {
     return (
         <>
         <TopMenuPage/>
-
 
 
     <section>
@@ -23,32 +30,34 @@ const Profile = () => {
 					 	
 					 		</div>
 					 		<div className="profile-form-edit">
-					 			<form>
+
+								 
+					 			<form onSubmit={handleSubmit} >
 					 				<div className="row">
 					 					<div className="col-lg-12">
 					 						<span className="pf-title">Titre de l'offre</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="" />
+					 							<input type="text"  name="titre" placeholder="" />
 					 						</div>
 					 					</div>
 
 					 					<div className="col-lg-12">
 					 						<span className="pf-title">Description</span>
 					 						<div className="pf-field">
-					 							<textarea></textarea>
+					 							<textarea name="description" ></textarea>
 					 						</div>
 					 					</div>
 										 <div className="col-lg-12">
 					 						<span className="pf-title">Description du profil recherché</span>
 					 						<div className="pf-field">
-					 							<textarea></textarea>
+					 							<textarea name="description_profil" ></textarea>
 					 						</div>
 					 					</div>
 
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Catégorie de l'emploi</span>
 					 						<div className="pf-field">
-					 							<select data-placeholder="Please Select Specialism" className="chosen">
+					 							<select data-placeholder="Please Select Specialism"  name="categorie_offre_id" className="form-control chosen">
 													<option>Marketing</option>
 													<option>Informatique</option>
 													<option>Art & Culture</option>
@@ -57,16 +66,29 @@ const Profile = () => {
 					 						</div>
 					 					</div>
 					 					
-					 					<div className="col-lg-6">
-					 						<span  for="customRange1" className="pf-title">Salaire</span>
+					 					<div className="col-lg-3">
+					 						<span  for="customRange1" className="pf-title">Salaire Min </span>
 					 						<div className="pf-field">
-												<input type="range" class="custom-range" id="customRange1"></input>
+												<input type="number"  name="salaire_min" class="custom-range" ></input>
 					 						</div>
 					 					</div>
-					 					<div className="col-lg-6">
-					 						<span className="pf-title"  for="customRange2">Expérience réquise (mois)</span>
+										 <div className="col-lg-3">
+					 						<span  for="customRange1" className="pf-title">Salaire Max </span>
 					 						<div className="pf-field">
-												<input type="range" class="custom-range" id="customRange2"></input>
+												<input type="number"  name="salaire_max" class="custom-range" ></input>
+					 						</div>
+					 					</div>
+					 					<div className="col-lg-3">
+					 						<span className="pf-title"  for="customRange2">Expérience réquise Min (mois)</span>
+					 						<div className="pf-field">
+												<input type="number"  name="experience_min" class="custom-range" ></input>
+					 							
+					 						</div>
+					 					</div>
+										 <div className="col-lg-3">
+					 						<span className="pf-title"  for="customRange2">Expérience réquise Max (mois)</span>
+					 						<div className="pf-field">
+												<input type="number"  name="experience_max" class="custom-range" ></input>
 					 							
 					 						</div>
 					 					</div>
@@ -74,7 +96,7 @@ const Profile = () => {
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Sexe</span>
 					 						<div className="pf-field">
-					 							<select data-placeholder="Please Select Specialism" className="chosen">
+					 							<select data-placeholder="Please Select Specialism"    name="sexe" className="form-control chosen">
 													<option>H/F</option>
 													<option>H</option>
 													<option>F</option>
@@ -87,24 +109,19 @@ const Profile = () => {
 					 					<div className="col-lg-12">
 					 						<span className="pf-title">Date d'expiration de l'offre</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="01.11.207" className="form-control datepicker" />
+					 							<input type="date"   name="date_expiration" className="form-control datepicker" />
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-12">
 					 						<span className="pf-title">Compétences réquises</span>
 					 						<div className="pf-field">
-						 						<ul className="tags">
-										           <li className="addedTag">Photoshop<span onclick="$(this).parent().remove();" className="tagRemove">x</span><input type="hidden" name="tags[]" value="Web Deisgn"/></li>
-							            			<li className="tagAdd taglist">  
-							              				 <input type="text" id="search-field"/>
-										            </li>
-												</ul>
+						 						<textarea name="competence_requise" id="" cols="30" rows="5"></textarea>
 											</div>
 					 					</div>
 										 <div className="col-lg-6">
 					 						<span className="pf-title">Pays de l'offre</span>
 					 						<div className="pf-field">
-					 							<select data-placeholder="Please Select Specialism" className="chosen">
+					 							<select data-placeholder="Please Select Specialism"  name="pays" className=" form-control chosen">
 													<option>Gabon</option>
 													<option>Benin</option>
 													
@@ -114,12 +131,12 @@ const Profile = () => {
 										 <div className="col-lg-6">
 					 						<span className="pf-title">Ville de l'offre</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="" />
+					 							<input type="text"  name="ville" placeholder="" />
 					 						</div>
 					 					</div>
 
 										 <div className="col-lg-12">
-					 						<button type="submit">Ajouter</button>
+					 						<button type="submit" >Ajouter</button>
 					 					</div>
 					 					
 
