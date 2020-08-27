@@ -1,7 +1,7 @@
 import React from 'react'
-import TopMenuHome from '../TopMenu/TopMenuHome'
+import TopMenuHome from '../topmenu/topmenuhome'
 
-import Footer from '../Footer/Footer'
+import Footer from '../footer/footer'
 
 class Home extends React.Component {
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import LeftMenuRecru from '../LeftMenu/LeftMenuRecru';
-import TopMenuPage from '../TopMenu/TopMenuPage';
-import LeftMenuCandi from '../LeftMenu/LeftMenuCandi';
+import LeftMenuRecru from '../leftmenu/leftmenurecru';
+import TopMenuPage from '../topmenu/topmenupage';
+import LeftMenuCandi from '../leftmenu/leftmenucandi';
 
 
 const Favoris = () => {

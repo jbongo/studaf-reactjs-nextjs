@@ -1,6 +1,6 @@
 import React from 'react';
-import TopMenuPage from '../TopMenu/TopMenuPage';
-import LeftMenuCandi from '../LeftMenu/LeftMenuCandi';
+import TopMenuPage from '../topmenu/topmenupage';
+import LeftMenuCandi from '../leftmenu/leftmenucandi';
 
 
 const Resume = () => {

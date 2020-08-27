@@ -1,5 +1,5 @@
 import React from 'react'
-import TopMenuPage from '../TopMenu/TopMenuPage'
+import TopMenuPage from '../topmenu/topmenupage'
 
 export default function Contact() {
     return (

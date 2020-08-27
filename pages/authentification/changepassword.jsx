@@ -1,6 +1,6 @@
 import React from 'react';
-import LeftMenuRecru from '../LeftMenu/LeftMenuRecru';
-import TopMenuPage from '../TopMenu/TopMenuPage';
+import LeftMenuRecru from '../leftmenu/Leftmenurecru';
+import TopMenuPage from '../topmenu/topmenupage';
 
 
 const ChangePassword = () => {
