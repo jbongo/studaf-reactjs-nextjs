@@ -1,5 +1,5 @@
 import React from 'react';
-import LeftMenuRecru from '../leftMenu/leftmenurecru';
+import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
 
 
