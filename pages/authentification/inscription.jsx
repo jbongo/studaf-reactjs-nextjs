@@ -71,7 +71,7 @@ const inscription = () => {
 								</form>
 								<div className="extra-login">
 											
-								<span><Link to="/connexion" title="">J'ai déjà un compte <i className="la la-long-arrow-right"></i></Link></span>
+								<span><Link href="/connexion" title="">J'ai déjà un compte </Link></span>
 
 									
 									<div className="login-social">
