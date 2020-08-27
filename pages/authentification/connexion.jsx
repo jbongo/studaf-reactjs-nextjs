@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom';
+import Link from 'next/link';
 
 import TopMenuPage from '../TopMenu/TopMenuPage'
 
@@ -62,7 +62,7 @@ const Connexion = () => {
 									<button type="submit">Se Connecter</button>
 								</form>
 								<div className="extra-login">
-								<span><NavLink to="/mon-compte" title="">Je crée un compte <i class="la la-long-arrow-right"></i></NavLink></span>
+								<span><Link to="/mon-compte" title="">Je crée un compte <i class="la la-long-arrow-right"></i></Link></span>
 
 									<div className="login-social">
 										<a className="fb-login" href="#" title=""><i className="fa fa-facebook"></i></a>
