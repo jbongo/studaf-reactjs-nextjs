@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
 
-import addOffreAction from '../../actions/recruteur/addOffre'
+import addOffreAction from '../../actions/recruteur/addoffreaction'
 
 
 function handleSubmit (e) {
@@ -10,10 +10,24 @@ function handleSubmit (e) {
 
 			const offre = {
 				
+ 
+				user_id: "5f453238fbe7d83e581b23e7",
+				categorie_offre_id: e.target.categorie_offre_id.value,
 				titre: e.target.titre.value,
-				description: e.target.description.value
+				description: e.target.description.value,
+				description_profil: e.target.description_profil.value,
+				sexe: e.target.sexe.value,
+				salaire_min: e.target.salaire_min.value,
+				salaire_max: e.target.salaire_max.value,
+				experience_min: e.target.experience_min.value,
+				experience_max: e.target.experience_max.value,
+				competence_requise: e.target.competence_requise.value,
+				pays: e.target.pays.value,
+				ville: e.target.ville.value,
+				date_expiration: e.target.date_expiration.value,
 
 			}
+
 			addOffreAction(offre)
 	
 }
