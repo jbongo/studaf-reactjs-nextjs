@@ -54,39 +54,33 @@ const Profile = () => {
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Nom de l'entreprise</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="TOTAL GABON" />
+					 							<input type="text" placeholder="TOTAL GABON" name="nom_entreprise" className="form-control"/>
 					 						</div>
 					 					</div>
 					 			
 					 					<div className="col-lg-3">
 					 						<span className="pf-title">Date de création</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="1991" />
+					 							<input type="date" placeholder="1991" name="date_creation_entreprise" className="form-control"/>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-3">
 					 						<span className="pf-title">Nombre de salariés</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="100 - 201" />
+					 							<input type="text" placeholder="100 - 201" name="nb_salarie" className="form-control"/>
 					 						</div>
 					 					</div>
 					 					
 					 					<div className="col-lg-12">
 					 						<span className="pf-title">Categories</span>
-					 						<div className="pf-field no-margin">
-						 						<ul className="tags">
-										           <li className="addedTag">Finance<span  className="tagRemove">x</span><input type="hidden" name="tags[]" value="Web Deisgn"/></li>
-										            <li className="addedTag">Informatique<span className="tagRemove">x</span><input type="hidden" name="tags[]" value="Web Develop"/></li>
-							            			<li className="tagAdd taglist">  
-							              				 <input type="text" id="search-field"/>
-										            </li>
-												</ul>
-											</div>
+											 <div className="pf-field">
+					 							<textarea type="catégorie" className="form-control" name="catégorie"></textarea>
+					 						</div>
 					 					</div>
 					 					<div className="col-lg-12">
 					 						<span className="pf-title">Description</span>
 					 						<div className="pf-field">
-					 							<textarea></textarea>
+					 							<textarea type="description" className="form-control" name="description"></textarea>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-12">
@@ -102,28 +96,28 @@ const Profile = () => {
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Facebook</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.facebook.com/total" />
-					 							<i className="fa fa-facebook"></i>
+					 							<input type="text" placeholder="www.facebook.com/total" name="facebook" className="form-control"/>
+					 							<i className="la la-facebook"></i>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Twitter</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.twitter.com/total" />
-					 							<i className="fa fa-twitter"></i>
+					 							<input type="text" placeholder="www.twitter.com/total" name="twitter" className="form-control"/>
+					 							<i className="la la-twitter"></i>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Google</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.google-plus.com/total" />
+					 							<input type="text" placeholder="www.google-plus.com/total" name="google" className="form-control"/>
 					 							<i className="la la-google"></i>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Linkedin</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.Linkedin.com/total" />
+					 							<input type="text" placeholder="www.Linkedin.com/total" name="linkedin" className="form-control"/>
 					 							<i className="la la-linkedin"></i>
 					 						</div>
 					 					</div>
@@ -137,26 +131,28 @@ const Profile = () => {
 					 					<div className="col-lg-4">
 					 						<span className="pf-title">Télephone</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="+220 538 963 58 96" />
+					 							<input type="text" placeholder="+220 538 963 58 96" name="contact1" className="form-control"/>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-4">
 					 						<span className="pf-title">Email</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="demo@total.com" />
+					 							<input type="email" placeholder="demo@total.com" className="form-control" name="contact2"/>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-4">
 					 						<span className="pf-title">Site web</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.total.com" />
+					 							<input type="text" placeholder="www.total.com" className="form-control" name="site_web"/>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Pays</span>
 					 						<div className="pf-field">
-					 							<select data-placeholder="Please Select Specialism" className="chosen">
+					 							<select data-placeholder="Please Select Specialism" className="chosen form-control" name="pays">
 													<option>Gabon</option>
+													<option>Côte d'Ivoire</option>
+													<option>Ghana</option>
 													
 												</select>
 					 						</div>
@@ -187,15 +183,15 @@ const Profile = () => {
 						 					<div className="col-lg-6">
 						 						<span className="pf-title">Ancien mot de passe</span>
 						 						<div className="pf-field">
-						 							<input type="password" />
+						 							<input type="password" className="form-control"/>
 						 						</div>
 						 						<span className="pf-title">Nouveau mot de passe</span>
 						 						<div className="pf-field">
-						 							<input type="password" />
+						 							<input type="password" className="form-control"/>
 						 						</div>
 						 						<span className="pf-title">Confirmez le mot de passe</span>
 						 						<div className="pf-field">
-						 							<input type="password" />
+						 							<input type="password" className="form-control"/>
 						 						</div>
 						 						<button type="submit">Modifier</button>
 						 					</div>

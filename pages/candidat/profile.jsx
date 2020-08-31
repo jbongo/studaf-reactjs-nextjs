@@ -54,19 +54,19 @@ const ChangePassword = () => {
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Nom</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder=" TUFAN" />
+					 							<input type="text" placeholder=" TUFAN" name="nom" className="form-control"/>
 					 						</div>
 					 					</div>
 										 <div className="col-lg-6">
 					 						<span className="pf-title">Prénom (s)</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="Ali " />
+					 							<input type="text" placeholder="Ali" name="prénom" className="form-control"/>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-12">
 					 						<span className="pf-title">Poste</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="UX / UI Designer" />
+					 							<input type="text" placeholder="UX / UI Designer" name="poste"className="form-control" />
 					 						</div>
 					 					</div>
 					 					
@@ -74,7 +74,7 @@ const ChangePassword = () => {
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Expérience</span>
 					 						<div className="pf-field">
-					 							<select data-placeholder="Allow In Search" className="chosen">
+					 							<select data-placeholder="Allow In Search" className="chosen form-control" name="expérience">
 													<option>0-2 ans</option>
 													<option>2-4 ans</option>
 													<option> Sup à 4 ans</option>
@@ -84,7 +84,7 @@ const ChangePassword = () => {
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Âge</span>
 					 						<div className="pf-field">
-											 <input type="text" placeholder="25" />
+											 <input type="text" placeholder="25" className="form-control" name="date_naissance"/>
 					 						</div>
 					 					</div>
 					 				
@@ -92,25 +92,23 @@ const ChangePassword = () => {
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Pays</span>
 					 						<div className="pf-field">
-					 							<select data-placeholder="Please Select Specialism" className="chosen">
+					 							<select data-placeholder="Please Select Specialism" className="chosen form-control" name=" paie">
 													<option>Gabon</option>
 													<option>Mali</option>
-													
 												</select>
 					 						</div>
 					 					</div>
 										 <div className="col-lg-6">
 					 						<span className="pf-title">Ville</span>
 					 						<div className="pf-field">
-											 <input type="text" placeholder="" />
-					 							
+											 <input type="text" placeholder="" name="ville" className="form-control"/>
 					 						</div>
 					 					</div>
 					 					
 					 					<div className="col-lg-12">
 					 						<span className="pf-title">Description</span>
 					 						<div className="pf-field">
-					 							<textarea></textarea>
+					 							<textarea className="form-control" name="description"></textarea>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-12">
@@ -126,28 +124,28 @@ const ChangePassword = () => {
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Facebook</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.facebook.com/SG" />
-					 							<i className="fa fa-facebook"></i>
+					 							<input type="text" placeholder="www.facebook.com/SG" name="facebook" className="form-control"/>
+					 							<i className="la la-facebook"></i>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Twitter</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.twitter.com/SG" />
-					 							<i className="fa fa-twitter"></i>
+					 							<input type="text" placeholder="www.twitter.com/SG" name="twitter" className="form-control"/>
+					 							<i className="la la-twitter"></i>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Google</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.google-plus.com/SG" />
+					 							<input type="text" placeholder="www.google-plus.com/SG" name="google" className="form-control"/>
 					 							<i className="la la-google"></i>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-6">
 					 						<span className="pf-title">Linkedin</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="www.Linkedin.com/SG" />
+					 							<input type="text" placeholder="www.Linkedin.com/SG" name="linkedin" className="form-control"/>
 					 							<i className="la la-linkedin"></i>
 					 						</div>
 					 					</div>
@@ -161,13 +159,13 @@ const ChangePassword = () => {
 					 					<div className="col-lg-4">
 					 						<span className="pf-title">Numéro de téléphone</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="+290 538 963 " />
+					 							<input type="text" placeholder="+290 538 963 " name="contact1" className="form-control"/>
 					 						</div>
 					 					</div>
 					 					<div className="col-lg-4">
 					 						<span className="pf-title">Email</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder="demo@jobhunt.com" />
+					 							<input type="text" placeholder="demo@jobhunt.com" name="contact2" className="form-control"/>
 					 						</div>
 					 					</div>
 
@@ -186,15 +184,15 @@ const ChangePassword = () => {
 						 					<div className="col-lg-6">
 						 						<span className="pf-title">Ancien mot de passe</span>
 						 						<div className="pf-field">
-						 							<input type="password" />
+						 							<input type="password" className="form-control"/>
 						 						</div>
 						 						<span className="pf-title">Nouveau mot de passe</span>
 						 						<div className="pf-field">
-						 							<input type="password" />
+						 							<input type="password" className="form-control"/>
 						 						</div>
 						 						<span className="pf-title">Confirmez le mot de passe</span>
 						 						<div className="pf-field">
-						 							<input type="password" />
+						 							<input type="password" className="form-control"/>
 						 						</div>
 						 						<button type="submit">Modifier</button>
 						 					</div>
