@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
 
-import addOffreAction from '../../actions/recruteur/addoffreaction'
+import addOffreAction from '../../actions/recruteur/offreaction'
 
 
 function handleSubmit (e) {
