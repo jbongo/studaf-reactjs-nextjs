@@ -4,7 +4,7 @@ import React from 'react'
 const axios = require('axios').default;
 
 axios.defaults.baseURL = 'http://127.0.0.1:4000';
-const AUTH_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjQ1MzIzOGZiZTdkODNlNTgxYjIzZTciLCJ0eXBlIjoiYWRtaW4iLCJpYXQiOjE1OTg5NjkzMjQsImV4cCI6MTU5ODk3NjUyNH0.xmwPnnzppSBDFMgt6nDk35Ecry4HU4N8VMrLcOjcRog"
+const AUTH_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjRhNTNjNzk1ZmQxYjE5MDg1MjNmYmMiLCJpYXQiOjE1OTk2MDYxNjksImV4cCI6MTU5OTYxMzM2OX0.eBJUxAvS_gBho2MKwP9R-0XpmfbaP4-cVI2tTaoiXi0";
 axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 
