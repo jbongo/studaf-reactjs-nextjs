@@ -3,8 +3,8 @@ import React from 'react'
 // le .default permet d'obtenir l'auto complete des fonction axios
 const axios = require('axios').default;
 
-axios.defaults.baseURL = 'http://127.0.0.1:4000';
-const AUTH_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjRhNTNjNzk1ZmQxYjE5MDg1MjNmYmMiLCJpYXQiOjE1OTk2MDYxNjksImV4cCI6MTU5OTYxMzM2OX0.eBJUxAvS_gBho2MKwP9R-0XpmfbaP4-cVI2tTaoiXi0";
+axios.defaults.baseURL = process.env.BASE_URI || 'http://127.0.0.1:4000';
+const AUTH_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjY1YWNkMDhjYTIwMTFlMTA1MmEzZWIiLCJpYXQiOjE2MDA1MzYzNzgsImV4cCI6MTYwMDU0MzU3OH0.F7_vzpOjHmYAueYDWcqeu2407tQdKFvMEieRoUHvbmc";
 axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 

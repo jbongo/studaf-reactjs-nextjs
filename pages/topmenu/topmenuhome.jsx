@@ -9,7 +9,7 @@ export default function TopMenuHome () {
 
      <div className="responsive-header">
 		<div className="responsive-menubar">
-			<div className="res-logo"><a href="index.html" title=""><img src="http://placehold.it/178x40" alt="" /></a></div>
+			<div className="res-logo"><a href="index.html" title=""><img src="../../assets/images/logo.jpg" alt="" /></a></div>
 			<div className="menu-resaction">
 				<div className="res-openmenu">
 					<img src="" alt="" /> Menu
@@ -68,7 +68,7 @@ export default function TopMenuHome () {
 		<div className="menu-sec">
 			<div className="container">
 				<div className="logo">
-					<a href="index.html" title=""><img className="hidesticky" src="http://placehold.it/178x40" alt="" /><img className="showsticky" src="http://placehold.it/178x40" alt="" /></a>
+					<a href="index.html" title=""><img className="hidesticky" src="../../assets/images/logo.jpg"  alt="" /><img className="showsticky" src="../../assets/images/logo.jpg"  alt="" /></a>
 				</div>
 				<div className="btn-extars">
 					<ul className="account-btns">

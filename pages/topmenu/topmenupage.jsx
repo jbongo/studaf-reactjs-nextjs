@@ -11,7 +11,7 @@ export default function TopMenuPage ()  {
 	
 	<div className="responsive-header">
 		<div className="responsive-menubar">
-			<div className="res-logo"><a href="index.html" title=""><img src="http://placehold.it/178x40" alt="" /></a></div>
+			<div className="res-logo"><a href="index.html" title=""><img src="../../assets/images/logo.jpg"  alt="" /></a></div>
 			<div className="menu-resaction">
 				<div className="res-openmenu">
 					<img src="images/icon.png" alt="" /> Menu
@@ -65,7 +65,7 @@ export default function TopMenuPage ()  {
 		<div className="menu-sec">
 			<div className="container">
 				<div className="logo">
-					<a href="index.html" title=""><img src="http://placehold.it/178x40" alt="" /></a>
+					<a href="index.html" title=""><img src="../../assets/images/logo.jpg"  alt="" /></a>
 				</div>
 				<div className="btn-extars">
 					<a href="#" title="" className="post-job-btn"><i className="la la-plus"></i>Postuler</a>
