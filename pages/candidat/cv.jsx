@@ -1,7 +1,7 @@
 import React from 'react';
 import TopMenuPage from '../topmenu/topmenupage';
 import LeftMenuCandi from '../leftmenu/leftmenucandi';
-
+import Link from 'next/link';
 
 const Resume = () => {
 
@@ -17,7 +17,7 @@ const Resume = () => {
 				 	<div className="col-lg-9 column">
 				 		<div className="padding-left">
 					 		<div className="manage-jobs-sec">
-					 			<div className="border-title"><h3>Formations</h3><a href="#" title=""><i className="la la-plus"></i> Ajouter Formation</a></div>
+					 			<div className="border-title"><h3>Formations</h3><Link href="/candidat/cv/add-formation" title="">  <a>  Ajouter Formation</a> </Link></div>
 						 		<div className="edu-history-sec">
 		 							<div className="edu-history">
 		 								<i className="la la-graduation-cap"></i>
