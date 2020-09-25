@@ -1,6 +1,7 @@
 import React from 'react'
 
 import TopMenuPage from '../topmenu/topmenupage'
+import Link from 'next/link'
 
 
 
@@ -27,13 +28,13 @@ const Offre = () => {
 										<div class="row">
 											<div class="col-lg-7">
 												<div class="job-field">
-													<input type="text" placeholder="titre de l'offre" />
+													<input type="text" className="form-control" placeholder="titre de l'offre" />
 													<i class="la la-keyboard-o"></i>
 												</div>
 											</div>
-											<div class="col-lg-4">
+											<div class="col-lg-3">
 												<div class="job-field">
-													<select data-placeholder="City, province or region" class="chosen-city">
+													<select class="chosen-city form-control">
 														<option>Gabon</option>
 														
 													</select>
@@ -69,7 +70,7 @@ const Offre = () => {
 				 <div class="row no-gape">
 				 	<aside class="col-lg-3 column">
 				 		<div class="widget border">
-				 			<h3 class="sb-title open">Date de candidature</h3>
+				 			<h3 class="sb-title open">Date de l'offre</h3>
 				 			<div class="posted_widget">
 								<input type="radio" name="choose" id="232"/><label for="232">Moins de 24 heures </label><br />
 								<input type="radio" name="choose" id="wwqe"/><label for="wwqe">Moins d'une semaine</label><br />
@@ -178,11 +179,11 @@ const Offre = () => {
 					 			{/* <span class="emlthis"><a href="mailto:example.com" title=""><i class="la la-envelope-o"></i> Email me Jobs Like These</a></span> */}
 					 			<div class="sortby-sec">
 					 				<span>Trier par</span>
-					 				<select data-placeholder="Most Recent" class="chosen">
+					 				<select data-placeholder="Most Recent" class="chosen form-control">
 										<option>Plus Recent</option>
 										
 									</select>
-									<select data-placeholder="20 Per Page" class="chosen">
+									<select data-placeholder="20 Per Page" class="chosen form-control">
 										<option>30 Par Page</option>
 										<option>40 Par Page</option>
 										<option>50 Par Page</option>
@@ -196,8 +197,12 @@ const Offre = () => {
 						 	<div class="job-listings-sec no-border">
 								<div class="job-listing wtabs">
 									<div class="job-title-sec">
-										<div class="c-logo"> <img src="http://placehold.it/98x51" alt="" /> </div>
-										<h3><a href="#" title="">Expert comptable</a></h3>
+						 				<Link href="/offres/detail">
+											<a  title="">
+												<div class="c-logo"> <img src="http://placehold.it/98x51" alt="" /> </div>
+												<h3>Expert comptable</h3>
+											</a>
+										</Link>
 										<span>Société Générale</span>
 										<div class="job-lctn"><i class="la la-map-marker"></i>Libreville, Gabon</div>
 									</div>

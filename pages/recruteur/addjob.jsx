@@ -2,11 +2,12 @@ import React, {useEffect} from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
 
-import addOffreAction from '../../actions/recruteur/offreaction'
+import {addOffreAction} from '../../actions/recruteur/offreaction'
 
 
 function handleSubmit (e) {
 			e.preventDefault();
+			
 
 			const offre = {
 				
