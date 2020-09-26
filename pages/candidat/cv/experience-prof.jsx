@@ -4,7 +4,7 @@ import LeftMenuCandi from '../../leftmenu/leftmenucandi';
 import Link from 'next/link';
 
 
-const UpdateFormation = () => {
+const ExperienceProf = () => {
     return(
         <>
              
@@ -18,12 +18,19 @@ const UpdateFormation = () => {
                         <div className="profile-form-edit col-lg-9">
                             <form>
                             <br/><br/>
-								<div> <h3>Modifier votre formation</h3> </div>
+								<div> <h3>Mon Experience professionnel</h3> </div>
                                 <div className="row">
                                     <div className="col-lg-6">
-					 					<span className="pf-title">Libelle Formation</span>
+					 					<span className="pf-title">Titre experience</span>
 					 						<div className="pf-field">
-					 							<input type="text" placeholder=" libelle formation" name="libelle" className="form-control"/>
+					 							<input type="text" placeholder=" libelle formation" name="titre" className="form-control"/>
+					 						</div>
+					 				</div>
+
+                                     <div className="col-lg-6">
+					 					<span className="pf-title">Nom Entreprise</span>
+					 						<div className="pf-field">
+					 							<input type="text" placeholder=" libelle formation" name="nom_entreprise" className="form-control"/>
 					 						</div>
 					 				</div>
 
@@ -52,7 +59,6 @@ const UpdateFormation = () => {
 					 						<button type="submit" >Modifier</button>
 					 					</div>
                                 </div>
-
                                 <br/><br/>
                             </form>
                         </div>
@@ -66,4 +72,4 @@ const UpdateFormation = () => {
     )
 }
 
-export default UpdateFormation
+export default ExperienceProf
