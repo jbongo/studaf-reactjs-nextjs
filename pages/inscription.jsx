@@ -1,32 +1,32 @@
 import React from 'react'
+
+import TopMenuPage from './topmenu/topmenupage'
 import Link from 'next/link';
 
-import TopMenuPage from '../topmenu/topmenupage'
 
 
-const Connexion = () => {
+const inscription = () => {
 
     return(
     
     <>
-
 <TopMenuPage/>
-
-<section>
+    
+       <section>
 		<div className="block no-padding  gray">
 			<div className="container">
 				<div className="row">
 					<div className="col-lg-12">
 						<div className="inner2">
 							<div className="inner-title2">
-								<h3>Connexion</h3>
+								<h3>Inscription</h3>
 								{/* <span>Keep up to date with the latest news</span> */}
 							</div>
 							{/* <div className="page-breacrumbs">
 								<ul className="breadcrumbs">
 									<li><a href="#" title="">Home</a></li>
 									<li><a href="#" title="">Pages</a></li>
-									<li><a href="#" title="">Login</a></li>
+									<li><a href="#" title="">Register</a></li>
 								</ul>
 							</div> */}
 						</div>
@@ -41,11 +41,14 @@ const Connexion = () => {
 			<div className="container">
 				<div className="row">
 					<div className="col-lg-12">
-						<div className="account-popup-area signin-popup-box static">
+						<div className="account-popup-area signup-popup-box static">
 							<div className="account-popup">
-							<h3>Connectez-vous !</h3>
-
+								<h3>Créez Votre Compte</h3>
 								{/* <span>Lorem ipsum dolor sit amet consectetur adipiscing elit odio duis risus at lobortis ullamcorper</span> */}
+								<div className="select-user">
+									<span>Je suis Candidats</span>
+									<span>Je suis recruteur</span>
+								</div>
 								<form>
 									<div className="cfield">
 										<input type="text" placeholder="Identifiant" />
@@ -55,15 +58,22 @@ const Connexion = () => {
 										<input type="password" placeholder="********" />
 										<i className="la la-key"></i>
 									</div>
-									<p className="remember-label">
-										<input type="checkbox" name="cb" id="cb1"/><label htmlFor="cb1">Se souvenir de moi</label>
-									</p>
-									<a href="#" title="">Mot de passe oublié ?</a>
-									<button type="submit">Se Connecter</button>
+									<div className="cfield">
+										<input type="text" placeholder="Email" />
+										<i className="la la-envelope-o"></i>
+									</div>
+								
+									<div className="cfield">
+										<input type="text" placeholder="Phone Number" />
+										<i className="la la-phone"></i>
+									</div>
+									<button type="submit">Enregistrer</button>
 								</form>
 								<div className="extra-login">
-								<span><Link href="/mon-compte" title="">Je crée un compte </Link></span>
+											
+								<span><Link href="/connexion" title="">J'ai déjà un compte </Link></span>
 
+									
 									<div className="login-social">
 										<a className="fb-login" href="#" title=""><i className="fa fa-facebook"></i></a>
 										<a className="li-login" href="#" title=""><i className="fa fa-linkedin"></i></a>
@@ -80,39 +90,7 @@ const Connexion = () => {
 
 
 
-<div className="account-popup-area signin-popup-box">
-	<div className="account-popup">
-		<span className="close-popup"><i className="la la-close"></i></span>
-		<h3>User Login</h3>
-		<span>Click To Login With Demo User</span>
-		<div className="select-user">
-			<span>Candidate</span>
-			<span>Employer</span>
-		</div>
-		<form>
-			<div className="cfield">
-				<input type="text" placeholder="Username" />
-				<i className="la la-user"></i>
-			</div>
-			<div className="cfield">
-				<input type="password" placeholder="********" />
-				<i className="la la-key"></i>
-			</div>
-			<p className="remember-label">
-				<input type="checkbox" name="cb" id="cbwq"/><label htmlFor="cbwq">Remember me</label>
-			</p>
-			<a href="#" title="">Forgot Password?</a>
-			<button type="submit">Login</button>
-		</form>
-		<div className="extra-login">
-			<span>Or</span>
-			<div className="login-social">
-				<a className="fb-login" href="#" title=""><i className="fa fa-facebook"></i></a>
-				<a className="tw-login" href="#" title=""><i className="fa fa-twitter"></i></a>
-			</div>
-		</div>
-	</div>
-</div>
+
 
 <div className="account-popup-area signup-popup-box">
 	<div className="account-popup">
@@ -158,11 +136,10 @@ const Connexion = () => {
 		</div>
 	</div>
 </div>
-
     </>
 //   Fin return
   )
 }
 
 
-export default Connexion
+export default inscription

@@ -24,7 +24,7 @@ export default function TopMenuHome () {
 					<a href="#" title="" className="post-job-btn"><i className="la la-plus"></i>Postuler</a>
 					<ul className="account-btns">
 					{/* <li className="signup-popup"><Link href="/inscription" title=""><i className="la la-key"></i> Inscription</Link></li> */}
-					<li className="signin-popup"><Link href="/mon-compte" title=""> Mon compte</Link></li>
+					<li className="signin-popup"><Link href="/connexion" title=""> Mon compte</Link></li>
 						
 					</ul>
 				</div>
@@ -57,7 +57,7 @@ export default function TopMenuHome () {
 
 						</li> */}
 						<li className="menu-item">
-							<Link href="/contact" title="">Nous contacter</Link>
+							<Link href="/connexion" title="">Nous contacter</Link>
 						</li>
 					</ul>
 			</div>
@@ -73,7 +73,8 @@ export default function TopMenuHome () {
 				<div className="btn-extars">
 					<ul className="account-btns">
 						{/* <li className="signup-popup"><Link href="/inscription" title=""><i className="la la-key"></i> Inscription</Link></li> */}
-						<li className="signin-popup"><Link href="/mon-compte" title=""> Mon compte</Link></li>
+					<li className="signin-popup"><Link href="/connexion" title=""> Mon compte</Link></li>
+
 					</ul>
 				</div>
 				<nav>

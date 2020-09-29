@@ -23,7 +23,7 @@ export default function TopMenuPage ()  {
 		</div>
 		<div className="responsive-opensec">
 			<div className="btn-extars">
-					<a href="/" title="" className="post-job-btn"><i className="la la-plus"></i>Postuler</a>
+					<div> <Link href="/offres/liste" title="" className="post-job-btn"><a> <i className="la la-plus"></i> Postuler </a></Link> </div>
 					<ul className="account-btns">
 					{/* <li className="signup-popup"><Link href="/inscription" title=""> Inscription</Link></li> */}
 					<li className="signin-popup"><Link href="Authentification/Inscription" title=""> Mon compte</Link></li>
@@ -34,7 +34,7 @@ export default function TopMenuPage ()  {
 				<input type="text" placeholder="Titre de l'offre" />
 				<button type="submit"><i className="la la-search"></i></button>
 			</form> */}
-			<a href="#" title="" className="post-job-btn"><i className="la la-plus"></i>Postuler</a>
+			<Link href="/offres/liste" title="" className="post-job-btn"><a> <i className="la la-plus"></i> Postuler </a></Link>
 			<div className="responsivemenu">
 				<ul>
 					<li className="menu-item">
@@ -68,7 +68,9 @@ export default function TopMenuPage ()  {
 					<a href="index.html" title=""><img src="../../assets/images/logo.jpg"  alt="" /></a>
 				</div>
 				<div className="btn-extars">
-					<a href="#" title="" className="post-job-btn"><i className="la la-plus"></i>Postuler</a>
+				<Link href="/offres/liste" title="" className="post-job-btn"><a  className="post-job-btn"><i className="la la-plus"></i>Postuler</a></Link>
+					
+
 					<ul className="account-btns">
 					{/* <li className="signup-popup"><Link href="/inscription" title=""> Inscription</Link></li> */}
 					{/* <li className="signin-popup"><Link href="/mon-compte" title="">Mon compte</Link></li> */}
