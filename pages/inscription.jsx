@@ -15,6 +15,7 @@ const inscription = () => {
 
 	const [showalertsuccess, setShowalertsuccess] = useState(false);
 	const [showalerterror, setShowalerterror] = useState(false);
+	const [errormessage, setErrormessage] = useState("");
 	const router = useRouter();
 
 
@@ -36,6 +37,7 @@ const inscription = () => {
 			if(result.status == 201){
 				setShowalertsuccess(true);
 			}else if(result.status == 200){
+				setErrormessage(result.data.error)
 				setShowalerterror(true);
 
 			}
@@ -91,34 +93,37 @@ const inscription = () => {
 
 
 								<div className="alerte">
-								<Alert show={showalertsuccess} variant="success">
-										<Alert.Heading>Félicitation votre compte a été crée.</Alert.Heading>
-										<p>
-										
-										</p>
-										<hr />
-										<div className="d-flex justify-content-end">
-										<Button onClick={() => router.push('/connexion')} variant="outline-success">
-											Je me connecte
-										</Button>
-										</div>
-									</Alert>
+									<Alert show={showalertsuccess} variant="success">
+											<Alert.Heading>Félicitation votre compte a été crée.</Alert.Heading>
+											<p>
+											
+											</p>
+											<hr />
+											<div className="d-flex justify-content-end">
+											<Button onClick={() => router.push('/connexion')} variant="outline-success">
+												Je me connecte
+											</Button>
+											</div>
+										</Alert>
 
-									<Alert show={showalerterror} variant="danger">
-										<Alert.Heading>Désolé cette adresse mail existe déjà !</Alert.Heading>
-										<p>
-										
-										</p>
-										<hr />
-										<div className="d-flex justify-content-end">
-										<Button onClick={() => setShowalerterror(false)} variant="outline-danger">
-											fermer
-										</Button>
-										</div>
-									</Alert>
+										<Alert show={showalerterror} variant="danger">
+											{/* <Alert.Heading>Désolé cette adresse mail existe déjà !</Alert.Heading> */}
+											<Alert.Heading>{errormessage}</Alert.Heading>
 
-									
-								</div>
+											
+											<p>
+											
+											</p>
+											<hr />
+											<div className="d-flex justify-content-end">
+											<Button onClick={() => setShowalerterror(false)} variant="outline-danger">
+												fermer
+											</Button>
+											</div>
+										</Alert>
+
+										
+									</div>
 
 
 								

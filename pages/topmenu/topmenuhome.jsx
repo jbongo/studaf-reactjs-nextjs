@@ -1,12 +1,40 @@
 import React from 'react'
 import Link from 'next/link';
+import {isAuth} from '../../actions/authentification'
+
+import Cookies from 'universal-cookie'
+
+
+const cookies = new Cookies()
 
 export default function TopMenuHome () {
 
-    return(
+	function isAuth(){
+		const role = cookies.get('role');
+
+        if(role != null) {
+           console.log(   {
+                value : true,
+                role: role
+            })
+        }else{
+            
+            console.log(   {
+                value : false,
+                role: null
+            })
+
+        }
+	}
+
+return (
     
     <>
-
+{
+		isAuth() 
+			
+	
+}
      <div className="responsive-header">
 		<div className="responsive-menubar">
 			<div className="res-logo"><a href="index.html" ><img src="../../assets/images/logo.jpg" alt="" /></a></div>
@@ -83,14 +111,22 @@ export default function TopMenuHome () {
 							<Link href="/" >Accueil</Link>
 							
 						</li>
-						<li className="menu-item">
-							<Link href="/recruteur/profile" >Recruteurs</Link>
-							
-						</li>
-						<li className="menu-item">
-							<Link href="/candidat/profile" >Candidats</Link>
-							
-						</li>
+						 {
+							   (isAuth.value == true) ? 	
+								
+								<div> 
+									<li className="menu-item">
+										<Link href="/recruteur/profile" >Recruteurs</Link>
+										
+									</li> 
+										<li className="menu-item">
+										<Link href="/candidat/profile" >Candidats</Link>										
+									</li>
+							</div>
+						   : ""
+						 }
+						  
+
 						<li className="menu-item">
 							<Link href="/blog/blog" >Blog</Link>
 							
@@ -111,8 +147,16 @@ export default function TopMenuHome () {
   
   </>
 //   Fin return
-  )
+)
+  
 }
 
+
+TopMenuHome.getInitialProps = async (ctx) => {
+	isAuth((result) => {
+		console.log(result);
+		return {auth : result }
+	})
+  }
 
 // export default TopMenuHome

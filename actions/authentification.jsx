@@ -1,12 +1,16 @@
 import React from 'react'
 import {useRouter} from 'next/router'
 
+import Cookies from 'universal-cookie'
+
+
 // le .default permet d'obtenir l'auto complete des fonction axios
 const axios = require('axios').default;
+const cookies = new Cookies()
 
 axios.defaults.baseURL = process.env.BASE_URI || 'https://studaf-node.herokuapp.com';
 // axios.defaults.baseURL = process.env.BASE_URI || 'http://127.0.0.1:4001';
-const AUTH_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjY1YWNkMDhjYTIwMTFlMTA1MmEzZWIiLCJpYXQiOjE2MDA1MzYzNzgsImV4cCI6MTYwMDU0MzU3OH0.F7_vzpOjHmYAueYDWcqeu2407tQdKFvMEieRoUHvbmc";
+const AUTH_TOKEN = "Bearer "+cookies.get('token');
 axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 
@@ -38,7 +42,7 @@ async function inscriptionAction  (data, callback) {
 
 const connexionAction = (data, callback) =>{
 
-    axios.get('/login') 
+    axios.post('/login',data) 
             .then((res)=> {
                 callback(res)
             })
@@ -52,7 +56,33 @@ const connexionAction = (data, callback) =>{
 
 
 
+const isAuth = (callback) => {
+
+    
+    const role = cookies.get('role');
+
+        if(role != null) {
+            callback({
+                value : true,
+                role: role
+            })
+        }else{
+            
+            callback( {
+                value : false,
+                role: null
+            })
+
+        }
+
+}
+
+
+
+
+
 module.exports = {
     inscriptionAction,
-    connexionAction  
+    connexionAction  ,
+    isAuth
 } 
