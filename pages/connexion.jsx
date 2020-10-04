@@ -19,8 +19,8 @@ const Connexion = () => {
 
 		inscriptionAction(data, (result)=>{
 
+console.log(result);
 
-				
 		})
 	}
 
