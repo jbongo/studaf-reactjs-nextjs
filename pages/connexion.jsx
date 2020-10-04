@@ -3,8 +3,26 @@ import Link from 'next/link';
 
 import TopMenuPage from './topmenu/topmenupage'
 
+import {inscriptionAction} from '../actions/authentification'
+
 
 const Connexion = () => {
+
+
+	function handleSubmit(e){
+		e.preventDefault();
+
+		const data = {
+			email : e.target.email.value,
+			password : e.target.password.value
+		}
+
+		inscriptionAction(data, (result)=>{
+
+
+				
+		})
+	}
 
     return(
     
@@ -46,13 +64,13 @@ const Connexion = () => {
 							<h3>Connectez-vous !</h3>
 
 								{/* <span>Lorem ipsum dolor sit amet consectetur adipiscing elit odio duis risus at lobortis ullamcorper</span> */}
-								<form>
+								<form onSubmit={handleSubmit}>
 									<div className="cfield">
-										<input type="text" placeholder="Identifiant" />
+										<input type="email" name="email" placeholder="email" />
 										<i className="la la-user"></i>
 									</div>
 									<div className="cfield">
-										<input type="password" placeholder="********" />
+										<input type="password" name="password" placeholder="********" />
 										<i className="la la-key"></i>
 									</div>
 									<p className="remember-label">
