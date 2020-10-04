@@ -80,25 +80,25 @@ export default function TopMenuPage ()  {
 				<nav>
 					<ul>
 						<li className="menu-item">
-							<Link href="/" title="">Accueil</Link>
+							<Link href="/" ><a> Accueil </a></Link>
 							
 						</li>
 						<li className="menu-item">
-							<Link href="/recruteur/profile" title="">Recruteurs</Link>
+							<Link href="/recruteur/profile" ><a> Recruteurs </a></Link>
 							
 						</li>
 						<li className="menu-item">
-							<Link href="/candidat/profile" title="">Candidats</Link>
+							<Link href="/candidat/profile" ><a> Candidats </a></Link>
 							
 						</li>
 						<li className="menu-item">
-							<Link href="/blog/blog" title=""> Blog  </Link>
+							<Link href="/blog/blog" ><a> Blog  </a></Link>
 						</li>
 						{/* <li className="menu-item">
 							<a href="#" title="">Offres d'emplois</a>
 						</li> */}
 						<li className="menu-item">
-							<Link href="/contact" title="">Nous contacter</Link>
+							<Link href="/contact"><a> Nous contacter </a></Link>
 						
 						</li>
 					</ul>
