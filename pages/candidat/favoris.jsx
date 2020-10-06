@@ -1,6 +1,7 @@
 import React from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
+import Footer from '../footer/footer';
 import LeftMenuCandi from '../leftmenu/leftmenucandi';
 
 
@@ -81,6 +82,7 @@ const Favoris = () => {
 				 </div>
 			</div>
 		</div>
+		<Footer/>
 	</section>
 
 

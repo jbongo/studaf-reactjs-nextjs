@@ -1,6 +1,7 @@
 import React from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
+import Footer from '../footer/footer';
 
 
 const Resume = () => {
@@ -156,6 +157,8 @@ const Resume = () => {
 					</div>
 				 </div>
 			</div>
+
+			<Footer/>
 		</div>
 	</section>
 

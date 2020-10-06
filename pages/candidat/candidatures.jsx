@@ -1,6 +1,7 @@
 import React from 'react';
 import TopMenuPage from '../topmenu/topmenupage';
 import LeftMenuCandi from '../leftmenu/leftmenucandi';
+import Footer from '../footer/footer';
 
 
 const Candidatures = () => {
@@ -97,6 +98,7 @@ const Candidatures = () => {
 					</div>
 				 </div>
 			</div>
+			<Footer/>
 		</div>
 	</section>
 

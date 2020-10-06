@@ -1,5 +1,6 @@
 import React from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
+import Footer from '../footer/footer';
 import TopMenuPage from '../topmenu/topmenupage';
 
 
@@ -205,11 +206,9 @@ const Profile = () => {
 					 	</div>
 					</div>
 
-			
-
-
-				 </div>
+				 </div>						 	
 			</div>
+			<Footer/>
 		</div>
 	</section>
 

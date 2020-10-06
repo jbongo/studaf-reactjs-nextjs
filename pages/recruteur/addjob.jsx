@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
-
+import Footer from '../footer/footer';
 import {addOffreAction} from '../../actions/recruteur/offreaction'
 
 
@@ -173,6 +173,8 @@ const Profile = () => {
 					</div>
 				 </div>
 			</div>
+			<br/>
+			<Footer/>
 		</div>
 	</section>
 

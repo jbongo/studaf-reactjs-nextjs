@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Footer from './footer/footer';
 import TopMenuPage from './topmenu/topmenupage'
 
 
@@ -89,6 +89,7 @@ const contact = () => {
 				 </div>
 			</div>
 		</div>
+		<Footer/>
 	</section>
 
 

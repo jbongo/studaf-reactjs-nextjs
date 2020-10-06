@@ -1,6 +1,7 @@
 import React from 'react';
 import TopMenuPage from '../topmenu/topmenupage';
 import LeftMenuCandi from '../leftmenu/leftmenucandi';
+import Footer from '../footer/footer';
 import Link from 'next/link';
 import {BsFillTrashFill} from 'react-icons/bs'
 import {BiPencil} from 'react-icons/bi'
@@ -119,6 +120,7 @@ const Resume = () => {
 				 </div>
 			</div>
 		</div>
+		<Footer/>
 	</section>
 
 

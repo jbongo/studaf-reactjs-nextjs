@@ -2,6 +2,8 @@ import React from 'react'
 
 import TopMenuPage from '../topmenu/topmenupage'
 
+import Footer from '../footer/footer';
+
 import Link from 'next/link';
 
 import Aside from './aside';
@@ -20,8 +22,9 @@ const Blog = () => {
 					<div className="col-lg-12">
 						<div className="inner2">
 							<div className="inner-title2">
-								<h3>Blog</h3>
+								<h3>Blog</h3><br/><br/> <Link href="/blog/add-article"><div className="btn btn-outline-info">Ajouter Article</div></Link>
 								{/* <span>Keep up to date with the latest news</span> */}
+								 
 							</div>
 							{/* <div className="page-breacrumbs">
 								<ul className="breadcrumbs">
@@ -35,11 +38,9 @@ const Blog = () => {
 				</div>
 			</div>
 		</div>
+		
 	</section>
-
-        
-
-
+		
 	<section>
 		<div className="block">
 			<div className="container">
@@ -140,9 +141,10 @@ const Blog = () => {
 					  <Aside/> 
 				   </div>
 				 </div>
-				 
+		
 			</div>
 		</div>
+		<Footer/>
 	</section>
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import TopMenuPage from '../../topmenu/topmenupage';
+import Footer from '../../footer/footer';
 import LeftMenuCandi from '../../leftmenu/leftmenucandi';
 
 
@@ -60,6 +61,7 @@ class  AddFormation extends React.Component {
 
                     </div>
                 </div>
+				<Footer/>
             </div>
 			</section>
          

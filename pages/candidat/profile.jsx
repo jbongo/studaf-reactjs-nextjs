@@ -2,6 +2,7 @@ import React from 'react';
 import LeftMenuRecru from '../leftmenu/leftmenurecru';
 import TopMenuPage from '../topmenu/topmenupage';
 import LeftMenuCandi from '../leftmenu/leftmenucandi';
+import Footer from '../footer/footer';
 
 
 const ChangePassword = () => {
@@ -203,12 +204,12 @@ const ChangePassword = () => {
 						 				</div>
 						 			</form>
 					 		</div>
-
-
 					 	</div>
 					</div>
 				 </div>
 			</div>
+
+			<Footer/>
 		</div>
 	</section>
 

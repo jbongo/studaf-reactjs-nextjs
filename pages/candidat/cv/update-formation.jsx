@@ -1,6 +1,7 @@
 import React from 'react';
 import TopMenuPage from '../../topmenu/topmenupage';
 import LeftMenuCandi from '../../leftmenu/leftmenucandi';
+import Footer from '../../footer/footer';
 import Link from 'next/link';
 
 
@@ -58,6 +59,8 @@ const UpdateFormation = () => {
                         </div>
                     </div>
                 </div>
+
+                <Footer/>
             </div>
 
 
