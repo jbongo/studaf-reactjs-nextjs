@@ -1,10 +1,72 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Link from 'next/link';
+import {useRouter} from 'next/router';
+import TopMenuPage from './topmenu/topmenupage'
 
-import TopMenuPage from '../topmenu/topmenupage'
+import {connexionAction} from '../actions/authentification'
+import {Alert, Button} from 'react-bootstrap/';
+import Cookies from 'universal-cookie'
+
 
 
 const Connexion = () => {
+
+	const [showalerterror, setShowalerterror] = useState(false);
+	const [errormessage, setErrormessage] = useState("");
+
+	const cookies = new Cookies();
+	const router = useRouter();
+
+
+
+	function handleSubmit(e){
+		e.preventDefault();
+
+		const data = {
+			email : e.target.email.value,
+			password : e.target.password.value
+		}
+
+		connexionAction(data, (result)=>{
+
+
+			
+			if(result.status == 200){
+
+				console.log("aaaaa");
+
+				console.log(result.data.token);
+				cookies.set('token', result.data.token,{ path: '/' }, {
+					httpOnly: true // true by default
+				})
+				cookies.set('user_id', result.data.userId, { path: '/' },{
+					httpOnly: true // true by default
+				})
+				cookies.set('role', result.data.role, { path: '/' },{
+					httpOnly: true // true by default
+				})
+				
+				if(result.data.role =="candidat"){
+					router.push('/candidat/profile')
+				}
+				else if(result.data.role =="recruteur"){
+					router.push('/recruteur/profile')
+
+				}
+				
+
+
+				// 
+			}else if(result.status > 200) {
+				
+				setErrormessage(result.data.error)
+
+				setShowalerterror(true);
+
+			}
+
+		})
+	}
 
     return(
     
@@ -45,14 +107,32 @@ const Connexion = () => {
 							<div className="account-popup">
 							<h3>Connectez-vous !</h3>
 
-								{/* <span>Lorem ipsum dolor sit amet consectetur adipiscing elit odio duis risus at lobortis ullamcorper</span> */}
-								<form>
+									<div className="alerte">
+
+										<Alert show={showalerterror} variant="danger">
+											<Alert.Heading>{errormessage} !</Alert.Heading>
+											{/* <Alert.Heading>Désolé ces identiants sont incorrects</Alert.Heading> */}
+											
+											<p>
+											
+											</p>
+											<hr />
+											<div className="d-flex justify-content-end">
+											<Button onClick={() => setShowalerterror(false)} variant="outline-danger">
+												fermer
+											</Button>
+											</div>
+										</Alert>
+
+										
+									</div>
+								<form onSubmit={handleSubmit}>
 									<div className="cfield">
-										<input type="text" placeholder="Identifiant" />
+										<input type="email" name="email" placeholder="email"  required/>
 										<i className="la la-user"></i>
 									</div>
 									<div className="cfield">
-										<input type="password" placeholder="********" />
+										<input type="password" name="password" placeholder="********"  required/>
 										<i className="la la-key"></i>
 									</div>
 									<p className="remember-label">
@@ -62,7 +142,7 @@ const Connexion = () => {
 									<button type="submit">Se Connecter</button>
 								</form>
 								<div className="extra-login">
-								<span><Link href="/mon-compte" title="">Je crée un compte </Link></span>
+								<span><Link href="/inscription" title="">Je crée un compte </Link></span>
 
 									<div className="login-social">
 										<a className="fb-login" href="#" title=""><i className="fa fa-facebook"></i></a>
