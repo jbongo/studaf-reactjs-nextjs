@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Footer from '../footer/footer';
 import TopMenuPage from '../topmenu/topmenupage'
 import Link from 'next/link'
 
@@ -309,6 +309,7 @@ const Offre = () => {
 				 </div>
 			</div>
 		</div>
+		<Footer/>
 	</section>
 
 

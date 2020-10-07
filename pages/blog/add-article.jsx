@@ -60,7 +60,7 @@ const AddArticle = ()=>{
                                             <div className="col-lg-9">
                                                         <span className="pf-title">Image Article</span>
                                                     <div className="pf-field">
-                                                        <input type="file"   name="image" className="form-control"/>
+                                                        <input type="file" name="image" className="form-control"/>
                                                     </div>
                                             </div><br/>
 
